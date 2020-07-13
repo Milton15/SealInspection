@@ -1,0 +1,50 @@
+﻿#loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.27);
+    z-index: 9000;
+}
+
+    #loading #ball {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 65%;
+        z-index: 1200;
+        border-top: 32px solid #439c84;
+        border-right: 32px solid #45423e;
+        border-bottom: 32px solid #ba250d;
+        border-left: 32px solid #cbd2db;
+        animation: spin 1.5s linear infinite;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        background-image: url('../CaucedoLogo.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

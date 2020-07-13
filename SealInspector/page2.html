@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Validar Contenedor</title>
+    <meta name="Seal Inspection" content="Seal Inspection">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img-favicon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="mask-icon" href="./img-favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#286090">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/jquery-confirm.min.css" rel="stylesheet" />
+    <link href="Content/jquery-confirm.css" rel="stylesheet" />
+    <link href="Content/input-group.css" rel="stylesheet" />
+    <link href="Content/LoadingEfect.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="login-form">
+                    <br />
+                    <fieldset>
+                        <legend style="font-size: 17px; margin-bottom: 10px;">
+                            <span class="glyphicon glyphicon-user pull-left"></span><label id="lbUser" class="pull-left"></label>
+                            <button id="btnCerrarSesion" type="button" class="pull-right btn btn-danger btn-xs">
+                                <span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión
+                            </button>
+                        </legend>
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-5 col-xs-4" style="padding-right: 0px;">
+                            <div class="form-group" style="margin-bottom: 5px;">
+                                <img src="fonts/sea-ship-with-containers.png" />
+                                <label style="font-size: 19px; font-weight: bold;" class="text-primary" id="barcoLb"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-5 col-xs-6" style="padding-right: 0px;">
+                            <div class="form-group" style="margin-bottom: 5px;">
+                                <img src="fonts/itinerary.png" />
+                                <label style="font-size: 19px;" class="text-success" id="viajeLb"></label>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-xs-2">
+                            <div id="wrapper" class="form-group">
+                                <button id="btnCambiar" type="button" class="btn btn-primary pull-right">
+                                    <span class="glyphicon glyphicon-transfer"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="post">
+                        <div class="form-group" style="margin-bottom: 5px;">
+                            <label style="font-size: 20px;" for="contenedor">CONTENEDOR</label>
+                            <div id="divInput" class="input-group two-fields" style="color: black;">
+                                <input id="contenedor4" type="text" class="input-lg" maxlength="4" autofocus autocomplete="off">
+                                <input id="contenedor7" type="number" class="input-lg" max="999999999">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="font-size: 20px;" for="sello">SELLO</label>
+                            <input id="sello" type="text" class="form-control input-lg" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <input id="btnValidar" type="button" class="btn btn-primary btn-lg btn-block" value="Validar" style="font-weight: bold;" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loading" class="hidden">
+        <div id="ball"></div>
+    </div>
+    <script src="scripts/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="Web-Config.js" type="text/javascript"></script>
+    <script src="LoginCode.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-confirm.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var barco = localStorage.getItem("barco");
+            var viaje = localStorage.getItem("viaje");
+            var user = localStorage.getItem("user");
+            $('#barcoLb').text(barco.toUpperCase());
+            $('#viajeLb').text(viaje.toUpperCase());
+            if (isNaN(user)) {
+                $('#lbUser').text(user);
+            }else {
+                window.location = "login.html";
+            }
+        });
+
+        //function limpia() {
+        //    var val = $('#contenedor4,#contenedor7').val();
+        //    var tam = val.length;
+        //    if (!val == "") {
+        //        for (i = 0; i < tam; i++) {
+        //            if (!isNaN(val[i])) {
+        //                $('#contenedor4,#contenedor7').text("");
+        //            }
+        //        }
+        //    }
+        //}
+
+    </script>
+</body>
+</html>

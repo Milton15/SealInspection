@@ -1,0 +1,25 @@
+﻿ /*.login-form {
+     width: 340px;
+     margin: 50px auto;
+ }*/
+
+ .login-form {
+     margin-bottom: 15px;
+     background: #f7f7f7;
+     padding: 30px;
+ }
+ html,
+ body,
+ .container-fluid {
+     height: 100%;
+ }
+
+ /*.form-control, .btn {
+     min-height: 38px;
+     border-radius: 2px;
+ }
+
+ .btn {
+     font-size: 15px;
+     font-weight: bold;
+ }*/

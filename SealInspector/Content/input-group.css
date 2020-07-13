@@ -1,0 +1,49 @@
+﻿.two-fields {
+    width:100%;
+}
+.two-fields .input-group {
+    width:100%;
+}
+.two-fields #contenedor4 {
+    /*width:17% !important;*/
+    width: 76px !important;/*76*/
+    border-radius: 15px;
+    border: 0px solid transparent;
+    border-right-width: 0px;
+    padding-right: 0px;
+    outline: none;
+}
+.two-fields #contenedor7 {
+    width:205px !important;
+    border: 0px solid transparent;
+    border-radius: 15px;
+    border-left-width: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    outline: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#contenedor4,#sello,#barco,#viaje{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    font-size: 25px;
+}
+#divInput{
+    border: 1px solid rgb(204,204,204);
+    border-radius: 6px;
+}
+
+body {
+    font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
+}
+#username{
+    text-transform: uppercase;
+}
+#username,#password{
+    font-weight: bold;
+    font-size: 23px;
+    color: black;
+}
